@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Microbe&display=swap');
+*{
+    margin: 0;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: 'Robot',sans-serif;
+}
+body{
+    min-height: 100vh;
+    background-image: linear-gradient(to right, #9077ff 0%, #9b7aff 0%, #8e7fff 21%, #9c85f9
+    78%, #6b2ab1 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.card{
+    position: relative;
+    width: 300px;
+    height: 400px;
+    background-color: #fff;
+    transform-style: preserve-3d;
+    transform: perspective(1000px);
+    border-radius: 8px;
+    box-shadow: 0 20px 30px rgba(0, 0, 0, .4);
+    transition: 1s;
+}
+.card:hover{
+    transform: translateX(50%);
+}
+.card .imgBox{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: block;
+    transform-style: preserve-3d;
+    transform-origin: left;
+    box-shadow: 0 20px 30px rgba(0, 0, 0, .4);
+    z-index: 10;
+    transition: 1s;
+}
+.card:hover .imgBox{
+    transform: rotateY(-180deg);
+}
+img{
+    width: 639px;
+    height: 798px;
+    border-radius: 8px;
+}
+.imgBox img{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+}
+.imgBox img:nth-child(2){
+    transform: rotateY(-180deg);
+
+}
+.details{
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+.content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 30px;
+    /* propiedad de css grid */
+}
+h2{
+    font-size: 32px;
+    text-align: center;
+}
+span{
+    color: #6b2ab1;
+    font-size: 26px;
+}
+.social-icon{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.social-icon a{
+    width: 30px;
+    height: 30px;
+    background: #333;
+    align-items: center;
+    transition: 0.5s;
+}
+.social-icon a:hover{
+    background-color: #6b2ab1;
+}
+.social-icon a i{
+    color: white;
+}
